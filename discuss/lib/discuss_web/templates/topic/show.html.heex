@@ -1,0 +1,23 @@
+<h1>Show Topic</h1>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @topic.title %>
+  </li>
+
+  <li>
+    <strong>Likes:</strong>
+    <%= @topic.likes %>
+  </li>
+
+  <li>
+    <strong>Views:</strong>
+    <%= @topic.views %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.topic_path(@conn, :edit, @topic) %></span> |
+<span><%= link "Back", to: Routes.topic_path(@conn, :index) %></span>
