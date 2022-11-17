@@ -17,6 +17,14 @@
     <%= @topic.views %>
   </li>
 
+  <li>
+    <strong>Categories:</strong>
+    <%= for cat <- @topic.categories do %>
+      <%= cat.title %>
+      <br>
+    <% end %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.topic_path(@conn, :edit, @topic) %></span> |

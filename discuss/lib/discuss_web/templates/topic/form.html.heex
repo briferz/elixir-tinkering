@@ -13,6 +13,8 @@
   <%= number_input f, :likes %>
   <%= error_tag f, :likes %>
 
+  <%= category_select f, @changeset %>
+
   <div>
     <%= submit "Save" %>
   </div>

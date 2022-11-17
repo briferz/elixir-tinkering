@@ -1,11 +1,14 @@
 defmodule Discuss.Topics.Topic do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Discuss.Topics.Category
 
   schema "topics" do
-    field(:likes, :integer)
     field(:title, :string)
+    field(:likes, :integer)
     field(:views, :integer)
+
+    many_to_many(:categories, Category, join_through: "topic_categories", on_replace: :delete)
 
     timestamps()
   end
